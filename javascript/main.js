@@ -131,7 +131,11 @@ const argentinaWorldCupSquad = {
  setTimeout(()=>
     playersDisplaySection.style.transform='translateX(0)',500
  )
- setTimeout(()=> playersDisplaySection.style.opacity='1',800)
+ setTimeout(()=>  {
+    playersDisplaySection.style.opacity='1';
+playersDisplaySection.scrollIntoView({behavior:'smooth',block:'start'})
+    
+ },800)
  }
 
  const adjustToChange=()=>{

@@ -162,11 +162,14 @@ main{
         padding: unset;
         padding-right: 0.5em;
         gap: 0.7em;
+        padding-left:0.5em;
     }
     #selection-container{
-        padding-right: 1em;
+        
+        padding-right: 0.5em;
         padding-top: 0.2em;
-        padding-left: 0.5em;
+        padding-left:0.5em;
+        justify-content: start;
          
     }
     #selection-container select{
