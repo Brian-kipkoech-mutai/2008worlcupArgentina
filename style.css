@@ -1,0 +1,184 @@
+body{
+font-size: 16px;
+background-color:  #333333;
+}
+:root{
+    --cardBackground:#1D1E20;
+    --playername-color:#FFFFFF;
+    --p_text:hsl(207, 11%, 69%);
+    --box-shadow:#afafaf;
+}
+.player-card{
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cardBackground);
+    width: min(20em,100vw);
+    border-radius: 1em;
+    font-family: 'Manrope',sans-serif;
+    color: var(--playername-color);
+     justify-content:space-evenly;
+    height: 15em;
+    box-shadow: 0 4px 10px 5px rgba(0, 0, 0, 0.1);
+    
+    padding: 1em;
+
+
+
+}
+  p{
+     margin: 0;
+    color: var(--p_text);
+    font-family: 'Mona Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+    /* background-color: ; */
+
+
+  }
+  h2{
+    margin:0;
+  }
+   
+header section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+   
+
+}
+header section p{
+    font-family: 'Manrope',sans-serif;
+    line-height:1.5em ;
+    font-size: min(4.2vw,1.2em);
+}
+#players-display-section{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-width : 19em;
+    margin:  0 auto;
+    gap: 1em;
+    opacity: 1;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out  ,opacity 0.3s ease-in-out ;
+    
+
+}
+#players-display-section::after{
+    content: '';
+    width: min(20em,100vw);
+    padding: 1em;
+
+}
+ 
+.after-element{
+    width: min(20em,100vw);
+    padding: 1em;
+}
+ header::after
+{
+    content: '';
+    display: block;
+    border-bottom: 2px solid var(--box-shadow);
+    
+}
+#selection-container{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    font-family:'Manrope',sans-serif;
+    padding: 1em;
+    align-items: end;
+    font-size: 1.3em;
+    justify-content: end;
+    padding-bottom: 0.2em;
+    
+    
+}
+#selection-container select{
+    font-size: inherit;
+    border-radius: 0.2em;
+    padding: 0.5em;
+    cursor: pointer;
+    background-color: var(--cardBackground);
+    color: var(--box-shadow);
+    outline: none;
+}
+span{
+    font-size:  min(1.3em);
+    color: #FFFFFF;
+}
+header p:not(header p span){
+ color: #afafaf;
+}
+body{
+    margin: 0;
+  
+}
+header{
+    background-color: #1D1E20;
+    border-radius: 0;
+    padding-top: 0.5em;
+    position: fixed;
+    z-index: 1;
+   display: block;
+   flex-direction: column;
+   width: 100vw;
+
+   
+   
+   
+    
+  
+}
+header >:nth-child(1){
+     
+    padding-left: 1.5em;
+    padding-bottom: initial;
+    gap: 1em;
+    padding-right: 1.5em;
+}
+label{
+    color: #FFFFFF;
+}
+main{
+    
+    display: flow-root;
+    padding-top: 22vh
+
+    
+}
+ 
+ 
+@media screen and (max-width: 500px) {
+     
+    main{
+    
+        padding-top: 22vh
+    
+        
+    }
+    header >:nth-child(1){
+        padding: unset;
+        padding-right: 0.5em;
+        gap: 0.7em;
+    }
+    #selection-container{
+        padding-right: 1em;
+        padding-top: 0.2em;
+        padding-left: 0.5em;
+         
+    }
+    #selection-container select{
+        outline: none;
+        flex-grow: 1;
+         
+    }
+     
+  }
+  @media screen and (max-width: 290px) {
+
+    .player-card{
+        width: 100vw;
+    }
+  }
